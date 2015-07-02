@@ -1,0 +1,146 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+*{
+	margin:0px;
+	padding: 0px;
+}
+
+body{
+	background-image:url('goldbg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #DCF4FF;
+}
+
+h1{
+	color: white;
+}
+
+h3{
+	font-size: 30px;
+}
+header{
+	
+	width:100%;
+	background-color:rgba(0,0,0,0.8);
+	padding-bottom: .5em;
+
+}
+header h3{
+	display:inline-block;
+
+}
+header h3 a{
+	display:inline-block;
+	color:white;
+
+}
+
+#headerlink h3 a{
+color:#FFCC00;
+text-decoration: none;
+font-size: 40px;
+ text-shadow:2px 2px #FFFFFF;
+ }
+
+
+
+nav {
+	width:97.5%;
+	padding:1em;
+}
+
+
+nav ul {
+float:right;
+}
+
+header nav ul li{
+	display:inline-block;
+	margin-left: 2em;
+
+
+}
+header nav ul li a{
+	color:#FFCC00;
+	text-decoration: none;
+
+}
+
+
+
+
+main {
+	max-width: 600px; 
+	margin: 100px auto;
+	/*padding: 2em;*/
+	background-color:rgba(0,0,0,0.8);
+	border-radius: 12px 12px;
+	
+}
+
+input {
+background-color: black;
+opacity:0.6;
+	padding: .5em;
+	color:white;
+}
+
+form div {
+	color:white;
+	margin-bottom: .5em;
+
+
+}
+
+
+#allposts {
+	color: white;
+}
+#allposts ul li{
+display:inline;
+}
+#bottompost{
+	padding-top: 2em;
+float:right;
+}
+
+#bottompost li{
+	display: inline-block;
+	margin-left:1em;
+}
+#bottompost li a{
+	color:white;
+}
+
+textarea {
+	border:1px solid #FFCC00;
+	padding: 1em;
+	font-size: 1.25em;
+	width: 400px;
+	background-color: black;
+
+}
+
+alert{
+
+}
+
+#greeting{
+	color:white;
+ 	 text-transform: uppercase;
+ 	 font-size: 20px;
+}

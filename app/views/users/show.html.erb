@@ -1,0 +1,20 @@
+<%= image_tag @user.image.url(:medium) %>
+<h1><%= @user.username %></h1>
+	<section>
+		<h3><%= @user.username %>'s Details</h3>
+			<ul>
+				<li><%= @user.fname %> <%= @user.lname %>
+				</li>
+				<% if current_user != @user %>
+					<% if current_user and current_user.following.include?(@user) %>
+						<li><%= link_to 'unfollow', unfollow_user_path(@user), remote: true %>
+						</li>
+					<% else %>
+						<li><%= link_to 'follow', follow_user_path(@user) %>
+						</li>
+					<% end %>
+				<% end %>
+				<li>Following <%= @user.following.length %> users</li> 
+				<li>Followed by <%= @user.followers.length %> users</li> 
+			</ul>
+</section>

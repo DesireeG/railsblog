@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Delete Account</title>
+	</head>
+		<body>
+
+			<p>Not That We Care, But Are You Sure You Wanna Leave Us?</p>
+				<h3>confirm your password below</h3>
+			<%= form_for current_user, method: :delete do |f| %>
+				<div>
+					<%= f.label :password %>
+					<%= f.password_field :password %>
+				</div>
+				<div>
+					<%= f.submit "Yes, Im Sure." %>
+				</div>
+			<% end %>
+
+		</body>
+</html>

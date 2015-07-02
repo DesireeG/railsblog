@@ -1,0 +1,11 @@
+<div class="post">
+
+	<h3><%= post.body %></h3>
+	
+	<p>posted <%= time_ago_in_words(post.created_at) %> by 
+		<%= link_to post.user.username, username_path(post.user.username) %>
+		<% if current_user and current_user == post.user %> 
+		 | <%= link_to 'X', post, method: :delete, data: { remote: true, deletable: true } %> 
+		<% end %>
+	</p>
+</div>

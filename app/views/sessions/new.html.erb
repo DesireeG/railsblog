@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Log In</title>
+	</head>
+		<body>
+
+		<center>
+
+		<h1>Login</h1>
+</center>
+
+		<%= form_tag '/login', method: :post do %>
+			<div>
+				<%= label_tag :email %>
+				<%= email_field_tag :email %>
+			</div>
+			<div>
+				<%= label_tag :password %>
+				<%= password_field_tag :password %>
+			</div>
+			<div>
+				<%= submit_tag "Login" %>
+			</div>
+		<% end %>
+
+		</body>
+</html>

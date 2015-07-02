@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center>
+<h1>Feeling Funny?</h1>
+<%= form_for @post do |f| %>
+	
+	<% if @post.errors.any? %>
+		<% @post.errors.full_messages.each do | error | %>
+			<p><%= error %></p>
+		<% end %>
+	<% end %>
+
+		<div>
+			<%= f.text_area :body, placeholder: "That moment when..." %>
+		</div>
+		<div>
+			<%= f.submit "Post It!" %>
+		</div>
+<% end %>
+
+</center>
+</body>
+</html>
