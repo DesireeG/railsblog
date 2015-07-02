@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
 	has_many :chirps, dependent: :destroy
-	has_many :active_relationships, class_name: "BuddySystem",
+	has_many :active_relationships, class_name: "Buddysystem",
 	                          foreign_key: :follower_id, 
 	                          dependent: :destroy
-  has_many :passive_relationships, class_name: "BuddySystem",
+  has_many :passive_relationships, class_name: "Buddysystem",
 	                           foreign_key: :followed_id, 
 	                           dependent: :destroy
   has_many :following, through: :active_relationships,  source: :followed # User.first.following

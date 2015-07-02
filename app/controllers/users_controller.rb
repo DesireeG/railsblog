@@ -11,7 +11,7 @@ def create
 	@user = User.new(user_params)
   		if  @user.save
   			session[:user_id] = @user.id
-  			redirect_to username_path(@user.username), notice: "Account Successfully Created"
+  			redirect_to allposts_path(@user.username), notice: "Account Successfully Created"
   		else
   			render :new
   		end
@@ -79,7 +79,7 @@ end
 		# -------FOLLOW-----------
 
   def follow
-    @buddysystem = buddysystem.new(follower_id: current_user.id, followed_id: params[:id])
+    @buddysystem = Buddysystem.new(follower_id: current_user.id, followed_id: params[:id])
     @user = User.find(params[:id])
     
     if @buddysystem.save
@@ -93,7 +93,7 @@ end
 		# -------UNFOLLOW-----------
 
   def unfollow
-    @buddysystem = buddysystem.find_by(follower_id: current_user.id, followed_id: params[:id])
+    @buddysystem = Buddysystem.find_by(follower_id: current_user.id, followed_id: params[:id])
     @user = User.find(params[:id])
     if @buddysystem and @buddysystem.destroy
       flash[:notice] = "You've successfully unfollowed #{@user.username}."
